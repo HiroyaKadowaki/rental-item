@@ -1,7 +1,7 @@
 class Item < ApplicationRecord
 
-  with_options presence: true, format: { with:/\d/ } do
-    validates :number
+  with_options presence: true do
+    validates :number, format: { with: /\A[0-9]+\z/}
   end
 
   validates :name, presence: true
