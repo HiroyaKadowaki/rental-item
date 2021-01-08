@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :validatable
 
-  with_options presence: true, format: { with:/\A[ぁ-んァ-ン一-龥]/} do
+  with_options presence: true do
     validates :name
     validates :department
   end
