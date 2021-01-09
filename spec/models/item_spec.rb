@@ -24,31 +24,31 @@ RSpec.describe Item, type: :model do
     end
 
     context 'データが保存できない時' do
-      it "nameが空では登録できないこと" do
+      it "nameが空では保存できないこと" do
         @item.name = ""
         @item.valid?
         expect(@item.errors.full_messages).to include "Name can't be blank"
       end
 
-      it "numberが空では登録できないこと" do
+      it "numberが空では保存できないこと" do
         @item.number = ""
         @item.valid?
         expect(@item.errors.full_messages).to include "Number can't be blank"
       end
 
-      it "numberが英角であれば登録できない" do
+      it "numberが英角であれば保存できない" do
         @item.number = "number"
         @item.valid?
         expect(@item.errors.full_messages).to include "Number is invalid"
       end
 
-      it "numberが全角であれば登録できない" do
+      it "numberが全角であれば保存できない" do
         @item.number = "数字"
         @item.valid?
         expect(@item.errors.full_messages).to include "Number is invalid"
       end
 
-      it "numberが全角数字であれば登録できない" do
+      it "numberが全角数字であれば保存できない" do
         @item.number = "１２３４"
         @item.valid?
         expect(@item.errors.full_messages).to include "Number is invalid"
