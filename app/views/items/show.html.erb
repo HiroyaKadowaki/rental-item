@@ -1,0 +1,21 @@
+<%= render "devise/shared/header" %>
+
+<div class="items-main">
+  <div class="show-title">
+    <%= @item.name %>
+  </div>
+
+  <div class="shows">
+    <div class="show-font">
+      <%= @item.number %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="edit-path">
+  <%= link_to '編集', edit_item_path, method: :get, class: "item-edit" %>
+  <p class="or-font">or</p>
+  <%= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
+</div>

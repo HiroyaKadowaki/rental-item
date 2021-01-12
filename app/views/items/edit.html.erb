@@ -1,0 +1,33 @@
+
+
+<div class="items-main">
+  <h2 class="items-title">備品情報入力</h2>
+  <%= form_with model: @item, local: true do |f| %>
+
+  <%= render "devise/shared/error_messages", model: f.object %>
+
+  <div class="new-items">
+    <div class="weight-bold-text">
+      備品ナンバー
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :number, class:"items-text", id:"item-number" %>
+    <div class="weight-bold-text">
+      備品名
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :name, class:"items-text", id:"item-name" %>
+      <div class="weight-bold-text">
+        備品の説明
+        <span class="indispensable">任意</span>
+      </div>
+    <%= f.text_area :comment, class:"items-text", id:"item-info", placeholder:"備品の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "変更する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', item_path, class:"back-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+</div>
