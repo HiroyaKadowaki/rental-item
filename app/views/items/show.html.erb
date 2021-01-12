@@ -1,13 +1,24 @@
 <%= render "devise/shared/header" %>
 
 <div class="items-main">
-  <div class="show-title">
-    <%= @item.name %>
-  </div>
-
   <div class="shows">
+    <div class="show-title">
+      <%= '備品名' %>
+    </div>
+    <div class="show-name">
+      <%= @item.name %>
+    </div>
+    <div class="show-title">
+      <%= '商品番号' %>
+    </div>
     <div class="show-font">
       <%= @item.number %>
+    </div>
+    <div class="show-title">
+      <%= '説明文' %>
+    </div>
+    <div class="show-font">
+      <%= @item.comment %>
     </div>
   </div>
 </div>
