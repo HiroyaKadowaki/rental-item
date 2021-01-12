@@ -1,1 +1,14 @@
 <%= render "devise/shared/header" %>
+
+
+<div class='item-lists'>
+  <h2 class='title'>備品一覧</h2>
+  <% @items.each do |item| %>
+  <ul class="item-summary">
+    <li class='list'>
+      <%= item.number %>
+      <%= link_to item.name, item_path(item) %>
+    </li>
+  </ul>
+  <% end %>
+</div>
