@@ -1,4 +1,5 @@
 class ItemsController < ApplicationController
+  before_action :set_item, only: [:show, :edit, :update, :destroy]
 
   def index
     @items = Item.all
@@ -21,24 +22,19 @@ class ItemsController < ApplicationController
   end
 
   def edit
-    # unless @item.user_id == current_user.id
-    #   redirect_to action: :index
-    # end
   end
 
   def update
-    # if @item.update(item_params)
-    #   redirect_to root_path
-    # else
-    #   render :edit
-    # end
+    if @item.update(item_params)
+      redirect_to root_path
+    else
+      render :edit
+    end
   end
 
   def destroy
-    # if @item.user_id == current_user.id
-    #   @item.destroy
-    # end
-    # redirect_to root_path
+    @item.destroy
+    redirect_to root_path
   end
 
 
@@ -48,5 +44,9 @@ class ItemsController < ApplicationController
     params.require(:item).permit(:name, :number, :comment).merge(user_id: current_user.id)
   end
 
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
 
 end

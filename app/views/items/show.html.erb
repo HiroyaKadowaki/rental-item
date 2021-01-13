@@ -1,0 +1,32 @@
+<%= render "devise/shared/header" %>
+
+<div class="items-main">
+  <div class="shows">
+    <div class="show-title">
+      <%= '備品名' %>
+    </div>
+    <div class="show-name">
+      <%= @item.name %>
+    </div>
+    <div class="show-title">
+      <%= '商品番号' %>
+    </div>
+    <div class="show-font">
+      <%= @item.number %>
+    </div>
+    <div class="show-title">
+      <%= '説明文' %>
+    </div>
+    <div class="show-font">
+      <%= @item.comment %>
+    </div>
+  </div>
+</div>
+
+
+
+<div class="edit-path">
+  <%= link_to '編集', edit_item_path, method: :get, class: "item-edit" %>
+  <p class="or-font">or</p>
+  <%= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
+</div>
