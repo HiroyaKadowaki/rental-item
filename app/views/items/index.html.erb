@@ -2,13 +2,22 @@
 
 
 <div class='item-lists'>
-  <h2 class='title'>備品一覧</h2>
-  <% @items.each do |item| %>
-  <ul class="item-summary">
-    <li class='list'>
-      <%= item.number %>
-      <%= link_to item.name, item_path(item) %>
-    </li>
-  </ul>
+  <% if user_signed_in? %>
+    <h2 class='title'>備品一覧</h2>
+    <% @items.each do |item| %>
+    <ul class="item-summary">
+      <li class='list'>
+        <%= item.number %>
+        <%= link_to item.name, item_path(item) %>
+        <% if item.rental != nil %>
+          <%# if current_user.id == item.rental.user_id == nil %>
+
+          <%= 貸し出し中 %>
+        <% else %>
+          <%= link_to "貸し出し可", item_rentals_path(item.id) %>
+        <% end %>
+      </li>
+    </ul>
+    <% end %>
   <% end %>
 </div>
