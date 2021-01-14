@@ -10,9 +10,12 @@
         <%= item.number %>
         <%= link_to item.name, item_path(item) %>
         <% if item.rental != nil %>
-          <%# if current_user.id == item.rental.user_id == nil %>
+          <% if current_user.id == item.rental.user_id %>
+            <%= link_to "返却", item_rental_path, method: :delete, class:'on-loan' %>
+          <% else %>
 
-          <%= 貸し出し中 %>
+            <%= link_to "貸し出し中", "#", class:'on-loan' %>
+          <% end %>
         <% else %>
           <%= link_to "貸し出し可", item_rentals_path(item.id) %>
         <% end %>
