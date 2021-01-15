@@ -1,0 +1,21 @@
+<div class="item-main">
+  <h2 class="items-title">備品を借りる</h2>
+  <%= form_with model: @rental, url: item_rentals_path, local: true do |f| %>
+
+  <%#= render "devise/shared/error_messages", model: f.object %>
+
+  <div class="new-items">
+    <div class="weight-bold-text">
+      返却予定日
+      <span class="indispensable">必須</span>
+    </div>
+    <%= f.text_area :rental_day, class:"items-text" %>
+
+    <div class="sell-btn-contents">
+      <%= f.submit "登録する" ,class:"sell-btn" %>
+      <%=link_to 'もどる', root_path, class:"back-btn" %>
+    </div>
+
+  </div>
+  <% end %>
+</div>

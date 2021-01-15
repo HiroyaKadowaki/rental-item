@@ -32,7 +32,7 @@
 
 | Column | Type | Options |
 | - | - | - |
-| scheduled_date | date | null: false |
+| rental_day | date | null: false |
 | user           | references | null: false, foreign_key: true |
 | item           | references | null: false, foreign_key: true |
 
