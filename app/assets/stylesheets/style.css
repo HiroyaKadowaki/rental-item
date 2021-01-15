@@ -1,0 +1,56 @@
+/* 全体編集 */
+
+ul {
+  list-style: none;
+}
+
+li {
+  margin: 0 5px;
+}
+
+/* 全体編集.xyz */
+
+/* ヘッダー編集 */
+header {
+  height: 75px;
+  width: 100vw;
+  background-color: lightcyan;
+}
+
+.top-space {
+  margin: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+.login-list {
+  display: flex;
+}
+
+/* ヘッダー編集.xyz */
+
+/* フッター変数 */
+
+footer {
+  height: 50px;
+  width: 100vw;
+  background-color: cyan;
+  position: absolute;
+  bottom: 0;
+}
+
+.footer {
+  display: flex;
+  justify-content: center;
+}
+
+.footer-font {
+  font-size: 4px;
+  color: lightslategray;
+}
+
+
+/* フッター編集.xyz */
