@@ -13,7 +13,7 @@
           <% if current_user.id == item.rental.user_id %>
             <%= link_to "返却", item_rental_path(item.rental.item_id, item.rental.id), method: :delete, class:'on-loan' %>
           <% else %>
-            <%= link_to "返却予定日；  "+item.rental.rental_day, "#", class:'on-loan' %>
+            <%= link_to "返却予定日；  "+item.rental.rental_day, user_path(item.rental.user_id), class:'on-loan' %>
           <% end %>
         <% else %>
           <%= link_to "貸し出し可", item_rentals_path(item.id) %>

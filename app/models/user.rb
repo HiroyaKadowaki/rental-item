@@ -14,4 +14,6 @@ class User < ApplicationRecord
   with_options format: { with: PASSWORD_REGEX } do
     validates :password
   end
+  has_many :items
+  has_many :rentals
 end
