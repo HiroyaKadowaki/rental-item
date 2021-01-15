@@ -1,0 +1,28 @@
+<%= render "devise/shared/header" %>
+
+<div class='user'>
+  <div class='user-data'>
+    <%= "名前" %>
+    <%= ";" %>
+    <%= @user.department %>
+  </div>
+  <div class='user-data'>
+    <%= "部署名" %>
+    <%= ";" %>
+    <%= @user.department %>
+  </div>
+  <div class='user-data'>
+    <% @rentals.each do |rental| %>
+      <%= "返却予定日" %>
+      <%= ";" %>
+      <%= rental.rental_day %>
+      <% if current_user.id == rental.user_id %>
+        <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
+      <% end %>
+    <% end %>
+  </div>
+
+</div>
+<div class="sell-btn-contents">
+  <%=link_to 'もどる', root_path, class:"back-btn" %>
+</div>
