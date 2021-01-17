@@ -1,4 +1,8 @@
-
+<header class='top-header'>
+  <div class='top-space'>
+    <h1 class="top-name">貸し出し管理アプリ</h1>
+  </div>
+</header>
 
 <div class="items-main">
   <h2 class="items-title">備品情報入力</h2>
@@ -9,19 +13,19 @@
   <div class="new-items">
     <div class="weight-bold-text">
       備品ナンバー
-      <span class="indispensable">必須</span>
+      <span class="indispensable-required">必須</span>
     </div>
-    <%= f.text_area :number, class:"items-text" %>
+    <%= f.text_area :number, class: "finld-line" %>
     <div class="weight-bold-text">
       備品名
-      <span class="indispensable">必須</span>
+      <span class="indispensable-required">必須</span>
     </div>
-    <%= f.text_area :name, class:"items-text" %>
+    <%= f.text_area :name, class: "finld-line" %>
       <div class="weight-bold-text">
         備品の説明
         <span class="indispensable">任意</span>
       </div>
-    <%= f.text_area :comment, class:"items-text", placeholder:"備品の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
+    <%= f.text_area :comment, class: "finld-line", placeholder:"備品の説明（必須 1,000文字まで）" ,rows:"7" ,maxlength:"1000" %>
 
     <div class="sell-btn-contents">
       <%= f.submit "変更する" ,class:"sell-btn" %>
@@ -31,3 +35,5 @@
   </div>
   <% end %>
 </div>
+
+<%= render "devise/shared/footer" %>
