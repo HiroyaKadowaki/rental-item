@@ -1,4 +1,4 @@
-/* 全体編集 */
+/* 全体 */
 
 ul {
   list-style: none;
@@ -8,9 +8,9 @@ li {
   margin: 0 5px;
 }
 
-/* 全体編集.xyz */
+/* 全体.xyz */
 
-/* ヘッダー編集 */
+/* ヘッダー */
 header {
   height: 75px;
   width: 100vw;
@@ -19,20 +19,34 @@ header {
 
 .top-space {
   margin: 0 20px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
 }
-
-
 
 .login-list {
   display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: absolute;
+  right: 20px;
+  top: 25px;
 }
 
-/* ヘッダー編集.xyz */
+.login {
+  border: 2px solid darkblue;
+  padding: 5px;
+  color: blue;
+  border-radius: 5px;
+}
 
-/* フッター変数 */
+.logout {
+  border: 2px solid darkblue;
+  padding: 5px;
+  color: black;
+  border-radius: 5px;
+}
+
+/* ヘッダー.xyz */
+
+/* フッター */
 
 footer {
   height: 50px;
@@ -53,4 +67,84 @@ footer {
 }
 
 
-/* フッター編集.xyz */
+/* フッター.xyz */
+
+/* ログイン画面 */
+
+.registration {
+  display: block;
+  justify-content: center;
+  align-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.finld-line {
+  border: 2px solid black;
+  border-radius: 5px;
+  margin: 2px 0 5px;
+  font-size: 15px;
+}
+
+.actions {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+  text-decoration : underline;
+  width: 65px;
+  background-color: royalblue;
+  border: 2px solid slateblue;
+  border-radius: 5px;
+  margin-top: 3px;
+}
+
+/* ログイン画面.xyz */
+
+/* ホーム画面 */
+
+.lists {
+  margin-left: 10px;
+}
+
+.item-summary {
+  margin-left: 5px;
+}
+
+.rental-path {
+  border: 2px solid green;
+  background-color: lightgreen;
+  color: blue;
+  border-radius: 5px;
+  margin: 2px 0 5px;
+  font-size: 15px;
+  padding: 2px;
+}
+
+/* ホーム画面.xyz */
+
+/* 備品画面 */
+
+.items-main {
+  display: block;
+  justify-content: center;
+  align-content: center;
+  margin-left: 10px;
+  margin-top: 10px;
+}
+
+.indispensable-required {
+  color: red;
+}
+
+.indispensable {
+  color: blue;
+}
+
+.sell-btn {
+  background-color: lightskyblue;
+  color: blue;
+  border: 2px solid blue;
+  border-radius: 5px;
+}
+
+/* 備品画面.xyz */

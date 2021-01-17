@@ -1,20 +1,22 @@
-<h2>Log in</h2>
-
 <header class='top-header'>
-  <ul class='lists-right'>
-    <li><%= link_to '新規登録', new_user_registration_path, class: "sign-up" %></li>
-  </ul>
+  <div class='top-space'>
+    <h1 class="top-name">貸し出し管理アプリ</h1>
+      <ul class="login-list">
+        <li><%= link_to '新規登録', new_user_registration_path, class: "login" %></li>
+      </ul>
+  </div>
 </header>
 
-<%= form_with model: @user, url: user_session_path, class: 'mada', local: true do |f| %>
+<%= form_with model: @user, url: user_session_path, class: 'registration', local: true do |f| %>
+<h2>ログイン</h2>
   <div class="field">
     <%= f.label :email %><br />
-    <%= f.email_field :email, autofocus: true, autocomplete: "email" %>
+    <%= f.email_field :email, autofocus: true, autocomplete: "email",class: "finld-line" %>
   </div>
 
   <div class="field">
     <%= f.label :password %><br />
-    <%= f.password_field :password, autocomplete: "current-password" %>
+    <%= f.password_field :password, autocomplete: "current-password", class: "finld-line" %>
   </div>
 
   <%#if devise_mapping.rememberable? %>
@@ -30,3 +32,4 @@
 <% end %>
 
 <%#= render "devise/shared/links" %>
+<%= render "devise/shared/footer" %>

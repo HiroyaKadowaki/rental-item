@@ -2,19 +2,16 @@
 
 <div class='user'>
   <div class='user-data'>
-    <%= "名前" %>
-    <%= ";" %>
-    <%= @user.department %>
+    <h3>名前</h3>
+    <%= @user.name %>
   </div>
   <div class='user-data'>
-    <%= "部署名" %>
-    <%= ";" %>
+    <h3>部署名</h3>
     <%= @user.department %>
   </div>
   <div class='user-data'>
     <% @rentals.each do |rental| %>
-      <%= "返却予定日" %>
-      <%= ";" %>
+      <h3>返却予定日</h3>
       <%= rental.rental_day %>
       <% if current_user.id == rental.user_id %>
         <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
