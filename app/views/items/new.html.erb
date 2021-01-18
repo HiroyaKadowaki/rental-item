@@ -29,11 +29,13 @@
 
     <div class="sell-btn-contents">
       <%= f.submit "登録する" ,class:"sell-btn" %>
-      <%=link_to 'もどる', root_path, class:"back-btn" %>
     </div>
-
   </div>
   <% end %>
+</div>
+
+<div class="switch">
+  <%=link_to 'もどる', root_path, class:"item-switch" %>
 </div>
 
 <%= render "devise/shared/footer" %>

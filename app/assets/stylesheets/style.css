@@ -58,7 +58,8 @@ footer {
 
 .footer {
   display: flex;
-  justify-content: center;
+	justify-content: center;
+	align-items: center;
 }
 
 .footer-font {
@@ -71,6 +72,8 @@ footer {
 
 /* ログイン画面 */
 
+
+
 .registration {
   display: block;
   justify-content: center;
@@ -79,14 +82,51 @@ footer {
   margin-top: 10px;
 }
 
+.container {
+  width: 100vw;
+  padding: 40px 40px;
+  display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.submit {
+  width: 400px;
+  background-color: #F7F7F7;
+  padding: 20px 25px 30px;
+  margin: 0 auto 25px;
+  margin-top: 50px;
+  -moz-border-radius: 2px;
+  -webkit-border-radius: 2px;
+  border-radius: 2px;
+  -moz-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  -webkit-box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+}
+
+.form {
+  direction: ltr;
+    height: 200px;
+    font-size: 16px;
+}
+
 .finld-line {
+  width: 100%;
   border: 2px solid black;
   border-radius: 5px;
   margin: 2px 0 5px;
   font-size: 15px;
 }
 
+.actions-position {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
 .actions {
+  top:calc(50% - 50px/2);
+  left:calc(50% - 50px/2);
   display: flex;
   justify-content: center;
   align-self: center;
@@ -106,8 +146,44 @@ footer {
   margin-left: 10px;
 }
 
+.item-title {
+  display: flex;
+  margin-left: 10px;
+}
+
 .item-summary {
   margin-left: 5px;
+}
+
+.item-lists {
+  display: flex;
+}
+
+.item-number {
+  width: 150px;
+  /* border: 1px solid black; */
+  /* border-top: transparent; */
+}
+
+.item-name {
+  width: 500px;
+}
+
+.item-rental {
+  width: 100px;
+  background-color: cyan;
+  display: flex;
+  justify-content: center;
+}
+
+.on-loan {
+  border: 2px solid lightcoral;
+  background-color: yellow;
+  color: red;
+  border-radius: 5px;
+  margin: 1px 0 3px;
+  font-size: 15px;
+  padding: 2px;
 }
 
 .rental-path {
@@ -115,7 +191,7 @@ footer {
   background-color: lightgreen;
   color: blue;
   border-radius: 5px;
-  margin: 2px 0 5px;
+  margin: 1px 0 3px;
   font-size: 15px;
   padding: 2px;
 }
@@ -130,6 +206,20 @@ footer {
   align-content: center;
   margin-left: 10px;
   margin-top: 10px;
+}
+
+.switch {
+  width: 100vw;
+  /* background-color: red; */
+  display: flex;
+	justify-content: center;
+	align-items: center;
+  position: absolute;
+  bottom: 50px;
+}
+
+.item-switch {
+  margin: 0 4px 0;
 }
 
 .indispensable-required {
