@@ -1,7 +1,7 @@
 <%= render "devise/shared/header" %>
 
 <div class="items-main">
-  <div class="shows">
+  <div class="item-show">
     <h3>備品名</h3>
     <div class="show-name">
       <%= @item.name %>
@@ -15,15 +15,12 @@
       <%= @item.comment %>
     </div>
   </div>
-  <div class="edit-path">
-    <%= link_to '編集', edit_item_path, method: :get, class: "item-edit" %>
-    <p class="or-font">or</p>
-    <%= link_to '削除', item_path, method: :delete, class:'item-destroy' %>
-  </div>
+</div>
 
-  <div class="sell-btn-contents">
-    <%=link_to 'もどる', root_path, class:"back-btn" %>
-  </div>
+<div class="switch">
+  <%= link_to '編集', edit_item_path, method: :get, class: "item-switch" %>
+  <%= link_to '削除', item_path, method: :delete, class:'item-switch' %>
+  <%=link_to 'もどる', root_path, class:"item-switch" %>
 </div>
 
 <%= render "devise/shared/footer" %>

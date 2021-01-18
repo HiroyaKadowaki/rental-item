@@ -4,21 +4,38 @@
 <div class='lists'>
   <% if user_signed_in? %>
     <h2 class='title'>備品一覧</h2>
+    <div class='item-title'>
+      <div class='item-number'>
+        <h4>備品番号</h4>
+      </div>
+      <div class='item-name'>
+        <h4>備品の名前</h4>
+      </div>
+      <div class='item-rental'>
+        <h4>貸し出し状況</h4>
+      </div>
+    </div>
     <% @items.each do |item| %>
     <ul class="item-summary">
       <li class='item-lists'>
-        <%= item.number %>
-        <%= link_to item.name, item_path(item) %>
-        <%= item.created_at.to_s(:date_jp) %>
-        <% if item.rental != nil %>
-          <% if current_user.id == item.rental.user_id %>
-            <%= link_to "返却", item_rental_path(item.rental.item_id, item.rental.id), method: :delete, class:'on-loan' %>
+        <div class='item-number'>
+          <%= item.number %>
+        </div>
+        <div class='item-name'>
+          <%= link_to item.name, item_path(item) %>
+        </div>
+        <%#= item.created_at.to_s(:date_jp) %>
+        <div class='item-rental'>
+          <% if item.rental != nil %>
+            <% if current_user.id == item.rental.user_id %>
+              <%= link_to "返却", item_rental_path(item.rental.item_id, item.rental.id), method: :delete, class:'on-loan' %>
+            <% else %>
+              <%= link_to "貸し出し中", user_path(item.rental.user_id), class:'on-loan' %>
+            <% end %>
           <% else %>
-            <%= link_to "返却予定日；  "+item.rental.rental_day, user_path(item.rental.user_id), class:'on-loan' %>
+            <%= link_to "貸し出し可", item_rentals_path(item.id), class: 'rental-path' %>
           <% end %>
-        <% else %>
-          <%= link_to "貸し出し可", item_rentals_path(item.id), class: 'rental-path' %>
-        <% end %>
+        </div>
       </li>
     </ul>
     <% end %>
