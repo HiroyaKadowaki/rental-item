@@ -24,7 +24,7 @@
         <div class='item-name'>
           <%= link_to item.name, item_path(item) %>
         </div>
-        <%#= item.created_at.to_s(:date_jp) %>
+        <%#= item.created_at.to_s(:date_jp) memo:貸し出し履歴を作るときに使うため%>
         <div class='item-rental'>
           <% if item.rental != nil %>
             <% if current_user.id == item.rental.user_id %>
