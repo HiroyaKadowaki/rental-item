@@ -73,7 +73,6 @@ password;s222222
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
-| rental_day | date       | null: false                    |
 | user       | references | null: false, foreign_key: true |
 | item       | references | null: false, foreign_key: true |
 

@@ -171,7 +171,7 @@ footer {
 
 .item-rental {
   width: 100px;
-  background-color: cyan;
+  /* background-color: cyan; */
   display: flex;
   justify-content: center;
 }

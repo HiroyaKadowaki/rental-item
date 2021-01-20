@@ -1,6 +1,6 @@
 <%= render "devise/shared/header" %>
 
-<div class='user'>
+<div class='lists'>
   <div class='user-data'>
     <h3>名前</h3>
     <%= @user.name %>
@@ -10,10 +10,10 @@
     <%= @user.department %>
   </div>
   <div class='user-data'>
+    <h3>貸し出し中の備品</h3>
     <% @rentals.each do |rental| %>
-      <h3>返却予定日</h3>
-      <%= rental.rental_day %>
       <% if current_user.id == rental.user_id %>
+        <%= rental.item.name %>
         <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
       <% end %>
     <% end %>

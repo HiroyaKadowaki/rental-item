@@ -13,11 +13,6 @@ RSpec.describe Rental, type: :model do
     end
 
     context 'データが保存できない時' do
-      it "rental_daymが入力されてなければ保存できないこと" do
-        @rental.rental_day = ""
-        @rental.valid?
-        expect(@rental.errors.full_messages).to include "Rental day can't be blank"
-      end
     end
   end
 end
