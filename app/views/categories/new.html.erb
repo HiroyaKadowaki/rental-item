@@ -1,0 +1,27 @@
+<header class='top-header'>
+  <div class='top-space'>
+    <h1 class="top-name">貸し出し管理アプリ</h1>
+  </div>
+</header>
+
+<div class='items-main'>
+  <h2>カテゴリーの追加</h2>
+  <%= form_with model: @category, local: true do |f| %>
+
+  <%= render "devise/shared/error_messages", model: f.object %>
+  <h3>名前</h3>
+  <div class='new-items'>
+    <%= f.text_area :name, class: 'finld-line' %>
+  </div>
+  <div class="sell-btn-contents">
+    <%= f.submit "登録する" ,class:"sell-btn" %>
+  </div>
+  <% end %>
+</div>
+
+
+<div class="switch">
+  <%=link_to 'もどる', root_path, class:"item-switch" %>
+</div>
+
+<%= render "devise/shared/footer" %>

@@ -3,6 +3,16 @@
 
 <div class='lists'>
   <% if user_signed_in? %>
+    <div class='category'>
+      <%= form_for @category do |s| %>
+        <div class='category-name'>
+          <%= s.collection_select :id, Category.all, :id, :name, {}, {class:'category-title'} %>
+        </div>
+      <% end %>
+      <div class='cate'>
+      <%= link_to "カテゴリー追加", new_category_path, class:'category-create' %>
+      </div>
+    </div>
     <h2 class='title'>備品一覧</h2>
     <div class='item-title'>
       <div class='item-number'>

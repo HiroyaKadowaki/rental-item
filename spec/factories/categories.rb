@@ -1,5 +1,5 @@
 FactoryBot.define do
-  factory :rental do
+  factory :category do
     
   end
 end
