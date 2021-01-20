@@ -15,6 +15,12 @@
       <%= @item.comment %>
     </div>
   </div>
+
+  <div class='rental-item'>
+    <% if @item.rental != nil %>
+      <%= @item.rental.created_at.to_s(:date_jp) %>
+    <% end %>
+  </div>
 </div>
 
 <div class="switch">

@@ -23,7 +23,6 @@ ActiveRecord::Schema.define(version: 2021_01_07_065307) do
   end
 
   create_table "rentals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
-    t.string "rental_day"
     t.bigint "user_id"
     t.bigint "item_id"
     t.datetime "created_at", precision: 6, null: false

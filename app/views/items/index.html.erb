@@ -24,7 +24,6 @@
         <div class='item-name'>
           <%= link_to item.name, item_path(item) %>
         </div>
-        <%#= item.created_at.to_s(:date_jp) memo:貸し出し履歴を作るときに使うため%>
         <div class='item-rental'>
           <% if item.rental != nil %>
             <% if current_user.id == item.rental.user_id %>
@@ -33,7 +32,9 @@
               <%= link_to "貸し出し中", user_path(item.rental.user_id), class:'on-loan' %>
             <% end %>
           <% else %>
-            <%= link_to "貸し出し可", item_rentals_path(item.id), class: 'rental-path' %>
+            <%= form_with model: @rental, url: item_rentals_path(item.id), local: true do |f| %>
+              <%= f.submit "貸し出し可" ,class:'rental-path' %>
+            <% end %>
           <% end %>
         </div>
       </li>
