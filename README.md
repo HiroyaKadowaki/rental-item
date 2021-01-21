@@ -9,7 +9,7 @@
 
 # URL
 
-
+https://rental-item.herokuapp.com
 
 # テスト用アカウント
 
