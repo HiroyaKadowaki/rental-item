@@ -11,11 +11,6 @@ RSpec.describe Item, type: :model do
         expect(@item).to be_valid
       end
 
-      it "commentに記入がなくても保存ができる" do
-        @item.comment = ""
-        expect(@item).to be_valid
-      end
-
       it "numberが半角数字なら保存ができる" do
         @item.number = "1234"
         expect(@item).to be_valid

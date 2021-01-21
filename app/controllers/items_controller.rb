@@ -3,6 +3,7 @@ class ItemsController < ApplicationController
 
   def index
     @items = Item.all
+    @category = Category.new
   end
 
   def new
@@ -41,9 +42,8 @@ class ItemsController < ApplicationController
 
   private
   def item_params
-    params.require(:item).permit(:name, :number, :comment).merge(user_id: current_user.id)
+    params.require(:item).permit(:name, :number, :category_id)
   end
-
 
   def set_item
     @item = Item.find(params[:id])

@@ -91,7 +91,7 @@ footer {
 }
 
 .submit {
-  width: 400px;
+  width: 70vw;
   background-color: #F7F7F7;
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
@@ -111,11 +111,13 @@ footer {
 }
 
 .finld-line {
-  width: 100%;
+  width: 60vw;
+  height: 40px;
   border: 2px solid black;
   border-radius: 5px;
   margin: 2px 0 5px;
   font-size: 15px;
+
 }
 
 .actions-position {
@@ -144,6 +146,40 @@ footer {
 
 .lists {
   margin-left: 10px;
+}
+
+.category {
+  width: 100vw;
+  height: 50px;
+  margin: 5px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.category-name {
+  height: 50px;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.category-title {
+  border: 2px solid sandybrown;
+  border-radius: 10px;
+
+}
+
+.cate {
+  width: 130px;
+  padding: 10px 0;
+}
+
+.category-create {
+  background-color: royalblue;
+  color: black;
+  width: 130px;
+  border: 2px solid black;
+  display: block;
+  justify-content: center;
 }
 
 .item-title {
@@ -204,8 +240,7 @@ footer {
   display: block;
   justify-content: center;
   align-content: center;
-  margin-left: 10px;
-  margin-top: 10px;
+  margin: 10px 10px 0;
 }
 
 .switch {
@@ -228,6 +263,10 @@ footer {
 
 .indispensable {
   color: blue;
+}
+
+.show-font {
+  margin-right: 20px;
 }
 
 .sell-btn {
