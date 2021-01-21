@@ -23,12 +23,10 @@ ActiveRecord::Schema.define(version: 2021_01_20_071135) do
   create_table "items", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "number"
     t.string "name"
-    t.bigint "user_id"
     t.bigint "category_id"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["category_id"], name: "index_items_on_category_id"
-    t.index ["user_id"], name: "index_items_on_user_id"
   end
 
   create_table "rentals", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
@@ -56,7 +54,6 @@ ActiveRecord::Schema.define(version: 2021_01_20_071135) do
 
   add_foreign_key "categories", "users"
   add_foreign_key "items", "categories"
-  add_foreign_key "items", "users"
   add_foreign_key "rentals", "items"
   add_foreign_key "rentals", "users"
 end
