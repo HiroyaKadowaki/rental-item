@@ -265,6 +265,10 @@ footer {
   color: blue;
 }
 
+.show-font {
+  margin-right: 20px;
+}
+
 .sell-btn {
   background-color: lightskyblue;
   color: blue;

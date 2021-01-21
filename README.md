@@ -9,6 +9,8 @@
 
 # URL
 
+
+
 # テスト用アカウント
 
 備品登録、貸し出しの動きの確認用アカウント
@@ -54,6 +56,20 @@ https://gyazo.com/e8038c301c009f16fad46baab20b52b9
 ログイン機能とログイン時の画面
 https://gyazo.com/39774ca1f8cb98d1940e215efd1028c5
 
+ 備品の追加と追加された状態
+ https://gyazo.com/2e527a9d0bb559ce90fb07d10b2bc4dd
+
+ 貸し出し可と返却の切り替え
+ https://gyazo.com/c5ec3bdc919db576c2f2803cc8c80955
+
+マイページから借りているものの確認、返却可能
+https://gyazo.com/0846f1c4279d85b4ee424c532ce05cf1
+
+貸し出し状況によって貸し出し状況の変化
+https://gyazo.com/53a9e3b754a1ebe6dc55988f67674568
+
+貸し出されていない備品は詳細ページからも貸し出し可能
+https://gyazo.com/b6f3ea31247d48d2059762c56076f953
 
 
 
