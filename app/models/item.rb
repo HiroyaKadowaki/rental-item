@@ -7,5 +7,5 @@ class Item < ApplicationRecord
   validates :name, presence: true
 
   belongs_to :category
-  has_one :rental
+  has_one :rental, dependent: :destroy
 end
