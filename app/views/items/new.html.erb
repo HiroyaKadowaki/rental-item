@@ -1,6 +1,15 @@
 <header class='top-header'>
   <div class='top-space'>
-    <h1 class="top-name">貸し出し管理アプリ</h1>
+    <h1>
+     <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
+    </h1>
+    <% if user_signed_in? %>
+      <ul class="login-list">
+        <li><%= link_to '備品の追加', new_item_path, class: "new-item" %></li>
+        <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
+        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+      </ul>
+    <% end %>
   </div>
 </header>
 
@@ -21,7 +30,9 @@
       <span class="indispensable-required">必須</span>
     </div>
     <%= f.text_area :name, class: "finld-line" %>
-
+    <div class="weight-bold-text">
+      カテゴリー選択
+    </div>
     <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"finld-line"}) %>
 
 
@@ -33,7 +44,7 @@
 </div>
 
 <div class="switch">
-  <%=link_to 'もどる', root_path, class:"item-switch" %>
+  <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
 </div>
 
 <%= render "devise/shared/footer" %>

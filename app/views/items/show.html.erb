@@ -45,9 +45,11 @@
 </div>
 
 <div class="switch">
-  <%= link_to '編集', edit_item_path, method: :get, class: "item-switch" %>
-  <%= link_to '削除', item_path, method: :delete, class:'item-switch' %>
-  <%=link_to 'もどる', root_path, class:"item-switch" %>
+  <% if @item.rental == nil %>
+    <%= link_to '編集', edit_item_path, method: :get, class: "item-switch" %>
+    <%= link_to '削除', item_path, method: :delete, class:'item-switch' %>
+  <% end %>
+  <%=link_to 'もどる', category_path(@item.category.id), class:"item-switch" %>
 </div>
 
 <%= render "devise/shared/footer" %>

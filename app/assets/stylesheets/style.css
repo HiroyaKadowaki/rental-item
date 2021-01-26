@@ -21,6 +21,10 @@ header {
   margin: 0 20px;
 }
 
+.top-name {
+  color: red;
+}
+
 .login-list {
   display: flex;
   justify-content: space-between;
@@ -49,7 +53,7 @@ header {
 /* フッター */
 
 footer {
-  height: 50px;
+  height: 25px;
   width: 100vw;
   background-color: cyan;
   position: absolute;
@@ -63,7 +67,7 @@ footer {
 }
 
 .footer-font {
-  font-size: 4px;
+  font-size: 10px;
   color: lightslategray;
 }
 
@@ -87,11 +91,11 @@ footer {
   padding: 40px 40px;
   display: flex;
 	justify-content: center;
-	align-items: center;
+  align-items: center;
 }
 
 .submit {
-  width: 70vw;
+  width: 450px;
   background-color: #F7F7F7;
   padding: 20px 25px 30px;
   margin: 0 auto 25px;
@@ -111,13 +115,12 @@ footer {
 }
 
 .finld-line {
-  width: 60vw;
+  width: 400px;
   height: 40px;
   border: 2px solid black;
   border-radius: 5px;
   margin: 2px 0 5px;
   font-size: 15px;
-
 }
 
 .actions-position {
@@ -152,8 +155,10 @@ footer {
   width: 100vw;
   height: 50px;
   margin: 5px 0;
-  display: flex;
-  justify-content: space-between;
+  position: relative;
+  left: calc(100vw - 145px);
+  /* display: flex;
+  justify-content: space-between; memo;カテゴリー追加の場合外す*/
 }
 
 .category-name {
@@ -170,14 +175,15 @@ footer {
 
 .cate {
   width: 130px;
-  padding: 10px 0;
+  /* padding: 10px 0; */
 }
 
 .category-create {
   background-color: royalblue;
   color: black;
-  width: 130px;
+  width: 125px;
   border: 2px solid black;
+  border-radius: 5px;
   display: block;
   justify-content: center;
 }
@@ -196,17 +202,15 @@ footer {
 }
 
 .item-number {
-  width: 150px;
-  /* border: 1px solid black; */
-  /* border-top: transparent; */
+  width: 20vw;
 }
 
 .item-name {
-  width: 500px;
+  width: 50vw;
 }
 
 .item-rental {
-  width: 100px;
+  width: 30vw;
   /* background-color: cyan; */
   display: flex;
   justify-content: center;
@@ -240,7 +244,7 @@ footer {
   display: block;
   justify-content: center;
   align-content: center;
-  margin: 10px 10px 0;
+  margin: 10px 0 0 10px;
 }
 
 .switch {
@@ -250,7 +254,7 @@ footer {
 	justify-content: center;
 	align-items: center;
   position: absolute;
-  bottom: 50px;
+  bottom: 25px;
 }
 
 .item-switch {
