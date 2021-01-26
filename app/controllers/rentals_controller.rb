@@ -9,7 +9,7 @@ class RentalsController < ApplicationController
   def create
     @rental = Rental.new(rental_params)
     if @rental.save
-      redirect_to root_path
+      redirect_to category_path(@rental.item.category.id)
     else
       render action: :index
     end
@@ -22,7 +22,7 @@ class RentalsController < ApplicationController
      if current_user.id == @rental.user_id
        @rental.destroy
      end
-     redirect_to root_path
+     redirect_to category_path(@rental.item.category.id)
   end
 
   private

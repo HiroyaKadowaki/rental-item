@@ -56,11 +56,11 @@ https://gyazo.com/e8038c301c009f16fad46baab20b52b9
 ログイン機能とログイン時の画面
 https://gyazo.com/39774ca1f8cb98d1940e215efd1028c5
 
- 備品の追加と追加された状態
- https://gyazo.com/2e527a9d0bb559ce90fb07d10b2bc4dd
+備品の追加と追加された状態
+https://gyazo.com/2e527a9d0bb559ce90fb07d10b2bc4dd
 
- 貸し出し可と返却の切り替え
- https://gyazo.com/c5ec3bdc919db576c2f2803cc8c80955
+貸し出し可と返却の切り替え
+https://gyazo.com/c5ec3bdc919db576c2f2803cc8c80955
 
 マイページから借りているものの確認、返却可能
 https://gyazo.com/0846f1c4279d85b4ee424c532ce05cf1

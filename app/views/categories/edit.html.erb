@@ -2,18 +2,13 @@
 
 <div class="items-main">
   <h2 class="items-title">備品情報入力</h2>
-  <%= form_with model: @item, local: true do |f| %>
+  <%= form_with model: @category, local: true do |f| %>
 
   <%= render "devise/shared/error_messages", model: f.object %>
 
   <div class="new-items">
     <div class="weight-bold-text">
-      備品ナンバー
-      <span class="indispensable-required">必須</span>
-    </div>
-    <%= f.text_area :number, class: "finld-line" %>
-    <div class="weight-bold-text">
-      備品名
+      カテゴリー名
       <span class="indispensable-required">必須</span>
     </div>
     <%= f.text_area :name, class: "finld-line" %>
@@ -26,7 +21,7 @@
 </div>
 
 <div class="switch">
-  <%=link_to 'もどる', item_path, class:"item-switch" %>
+  <%=link_to 'もどる', category_path, class:"item-switch" %>
 </div>
 
 <%= render "devise/shared/footer" %>
