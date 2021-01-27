@@ -51,34 +51,41 @@ password;s222222
 # 実装した機能についてのGIFと解説
 
 未ログイン時の画面とログインと新規登録画面
-https://i.gyazo.com/bf63eb8d8797f54c95a720078c1aa4ca.mp4
+![ダウンロード (6)](https://user-images.githubusercontent.com/71200627/105972575-1878d180-60cf-11eb-9483-3391433d4ad5.gif)
+
 
 ログイン機能とログイン時の画面
-https://i.gyazo.com/fc44dcc85d29534b51a88dd537111c67.mp4
+![ダウンロード (9)](https://user-images.githubusercontent.com/71200627/105973369-00ee1880-60d0-11eb-8d0b-d6bebc0fe43a.gif)
 
 カテゴリーの追加と追加された状態
-https://i.gyazo.com/70bd95c88abd217502b42bfa6f6d40cb.mp4
+![ダウンロード (3)](https://user-images.githubusercontent.com/71200627/105971803-46a9e180-60ce-11eb-9317-ced5de9c7b5d.gif)
 
 カテゴリーの備品データありなしのビューの違い
-https://i.gyazo.com/60fa315f5d9c55261553aa929b8e9582.mp4
+![ダウンロード](https://user-images.githubusercontent.com/71200627/105973782-7e198d80-60d0-11eb-9cd0-ed170692ca6e.gif)
+
 
 備品の追加と追加された状態
-https://i.gyazo.com/7e51c8a39e738ce11455182600554f0b.mp4
+![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/105971342-c1263180-60cd-11eb-9db5-93be1790f30d.gif)
+
 
 貸し出し可と返却の切り替え
-[](https://i.gyazo.com/c822126bcc3db76abc1aaf0e565a9033.mp4)
+![ダウンロード (7)](https://user-images.githubusercontent.com/71200627/105972881-70afd380-60cf-11eb-8259-baf73db582ac.gif)
+
 
 マイページから借りているものの確認、返却可能
-[](https://i.gyazo.com/b5d31da085ae1f3f8f08b3ca2fbf9e98.mp4)
+![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/105972426-f41cf500-60ce-11eb-8117-3fe0583c1d6e.gif)
 
 他人の貸し出し状況によって貸し出し状況の変化
-[](https://i.gyazo.com/61956bb97432665b763cdb62436e65b4.mp4)
+![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/105972066-9688a880-60ce-11eb-980d-77611d89e8fd.gif)
 
-貸し出されていない備品は詳細ページからも貸し出し可能
-[](https://i.gyazo.com/ceb641605024e5700970c4c8c9ed2753.mp4)
+
+貸し出されていない備品は詳細ページからも返却可能
+![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/105973103-ae146100-60cf-11eb-82fe-586305acf278.gif)
+
+
 
 備品の削除
-[](https://i.gyazo.com/67b6ab677b2c49fecf6bbb7b900c2782.mp4)
+![ダウンロード (2)](https://user-images.githubusercontent.com/71200627/105971636-16624300-60ce-11eb-99d2-9a592a50999f.gif)
 
 
 # 実装予定の機能
