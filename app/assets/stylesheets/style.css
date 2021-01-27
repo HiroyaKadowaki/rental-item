@@ -8,6 +8,12 @@ li {
   margin: 0 5px;
 }
 
+.how {
+  font-size: 10px;
+  margin-right:2vw ;
+  text-align: right;
+}
+
 /* 全体.xyz */
 
 /* ヘッダー */
@@ -23,6 +29,7 @@ header {
 
 .top-name {
   color: red;
+  text-decoration: none;
 }
 
 .login-list {
@@ -34,11 +41,16 @@ header {
   top: 25px;
 }
 
+.new-item ,.user-name {
+  text-decoration: none;
+}
+
 .login {
   border: 2px solid darkblue;
   padding: 5px;
   color: blue;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 .logout {
@@ -46,6 +58,7 @@ header {
   padding: 5px;
   color: black;
   border-radius: 5px;
+  text-decoration: none;
 }
 
 /* ヘッダー.xyz */
@@ -154,8 +167,9 @@ footer {
 .category {
   width: 100vw;
   height: 50px;
-  margin: 5px 0;
-  position: relative;
+  margin: 15px 0;
+  position: absolute;
+  top: 75px;
   left: calc(100vw - 145px);
   /* display: flex;
   justify-content: space-between; memo;カテゴリー追加の場合外す*/
@@ -168,14 +182,14 @@ footer {
 }
 
 .category-title {
-  border: 2px solid sandybrown;
-  border-radius: 10px;
-
+  display: inline-flex;
+  background-color: brown;
+  margin-top: 10px;
+  margin-bottom: 20px;
 }
 
 .cate {
   width: 130px;
-  /* padding: 10px 0; */
 }
 
 .category-create {
@@ -184,8 +198,24 @@ footer {
   width: 125px;
   border: 2px solid black;
   border-radius: 5px;
+  text-decoration: none;
   display: block;
   justify-content: center;
+}
+
+.category-lists {
+  margin-bottom: 10px;
+}
+
+.category-swtich {
+  font-size: 22px;
+  padding: 2px;
+  background-color: chartreuse;
+  border: 3px solid black;
+  color: black;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-flex;
 }
 
 .item-title {
@@ -209,6 +239,11 @@ footer {
   width: 50vw;
 }
 
+.item-link {
+  text-decoration: none;
+  color: black;
+}
+
 .item-rental {
   width: 30vw;
   /* background-color: cyan; */
@@ -224,6 +259,7 @@ footer {
   margin: 1px 0 3px;
   font-size: 15px;
   padding: 2px;
+  text-decoration: none;
 }
 
 .rental-path {
@@ -259,6 +295,8 @@ footer {
 
 .item-switch {
   margin: 0 4px 0;
+  color: blue;
+  text-decoration: none;
 }
 
 .indispensable-required {
@@ -271,6 +309,7 @@ footer {
 
 .show-font {
   margin-right: 20px;
+
 }
 
 .sell-btn {
