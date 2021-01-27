@@ -1,6 +1,8 @@
 <header class='top-header'>
   <div class='top-space'>
-    <h1 class="top-name">貸し出し管理アプリ</h1>
+    <h1 class="top-name">
+    <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
+    </h1>
     <ul class='login-list'>
       <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
     </ul>
