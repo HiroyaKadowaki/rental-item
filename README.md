@@ -51,26 +51,34 @@ password;s222222
 # 実装した機能についてのGIFと解説
 
 未ログイン時の画面とログインと新規登録画面
-https://gyazo.com/e8038c301c009f16fad46baab20b52b9
+https://i.gyazo.com/bf63eb8d8797f54c95a720078c1aa4ca.mp4
 
 ログイン機能とログイン時の画面
-https://gyazo.com/39774ca1f8cb98d1940e215efd1028c5
+https://i.gyazo.com/fc44dcc85d29534b51a88dd537111c67.mp4
+
+カテゴリーの追加と追加された状態
+https://i.gyazo.com/70bd95c88abd217502b42bfa6f6d40cb.mp4
+
+カテゴリーの備品データありなしのビューの違い
+https://i.gyazo.com/60fa315f5d9c55261553aa929b8e9582.mp4
 
 備品の追加と追加された状態
-https://gyazo.com/2e527a9d0bb559ce90fb07d10b2bc4dd
+https://i.gyazo.com/7e51c8a39e738ce11455182600554f0b.mp4
 
 貸し出し可と返却の切り替え
-https://gyazo.com/c5ec3bdc919db576c2f2803cc8c80955
+[](https://i.gyazo.com/c822126bcc3db76abc1aaf0e565a9033.mp4)
 
 マイページから借りているものの確認、返却可能
-https://gyazo.com/0846f1c4279d85b4ee424c532ce05cf1
+[](https://i.gyazo.com/b5d31da085ae1f3f8f08b3ca2fbf9e98.mp4)
 
-貸し出し状況によって貸し出し状況の変化
-https://gyazo.com/53a9e3b754a1ebe6dc55988f67674568
+他人の貸し出し状況によって貸し出し状況の変化
+[](https://i.gyazo.com/61956bb97432665b763cdb62436e65b4.mp4)
 
 貸し出されていない備品は詳細ページからも貸し出し可能
-https://gyazo.com/b6f3ea31247d48d2059762c56076f953
+[](https://i.gyazo.com/ceb641605024e5700970c4c8c9ed2753.mp4)
 
+備品の削除
+[](https://i.gyazo.com/67b6ab677b2c49fecf6bbb7b900c2782.mp4)
 
 
 # 実装予定の機能
