@@ -24,7 +24,7 @@
             <%= item.number %>
           </div>
           <div class='item-name'>
-            <%= link_to item.name, item_path(item) %>
+            <%= link_to item.name, item_path(item), class:'item-link' %>
           </div>
           <div class='item-rental'>
             <% if item.rental != nil %>
@@ -42,6 +42,12 @@
         </li>
       </ul>
     <% end %>
+    <div class='how'>
+      <%= "※『貸し出し可』を押すと貸し出しできます" %>
+    </div>
+    <div class='how'>
+      <%= "※『貸し出し可』を押すと貸し出しできます" %>
+    </div>
   <% else %>
   <h2>備品を登録してください</h2>
   <% end %>
