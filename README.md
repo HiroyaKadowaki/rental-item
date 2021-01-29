@@ -17,7 +17,7 @@ https://rental-item.herokuapp.com
 Email;111@111
 password;a111111
 
-借りている人物を確認用アカウント
+貸し出し画面変更確認用アカウント
 Email;222@222
 password;s222222
 
