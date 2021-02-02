@@ -9,7 +9,11 @@
 
 # URL
 
+・heroku
 https://rental-item.herokuapp.com
+
+・AWS
+http://18.180.185.54/
 
 # テスト用アカウント
 
@@ -113,7 +117,6 @@ password;s222222
 ・備品予約機能
 ・エラー文を日本語化
 ・貸し出し履歴機能
-・AWSでのデプロイ
 
 # データベース設計
 
