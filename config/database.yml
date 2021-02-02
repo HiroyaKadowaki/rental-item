@@ -51,5 +51,5 @@ production:
   <<: *default
   database: rental_item_production
   username: root
-  password: <%= ENV['RENTAL_ITEM_DATABASE_PASSWORD'] %>
+  password: <%= ENV['DATABASE_PASSWORD'] %>
   socket: /var/lib/mysql/mysql.sock
