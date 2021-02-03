@@ -1,33 +1,35 @@
-<%= render "devise/shared/header" %>
+<div class='wrapper'>
+  <%= render "devise/shared/header" %>
 
-<div class='lists'>
-<h2>プロフィール</h2>
-  <div class='user-data'>
-    <h3>名前</h3>
-    <%= @user.name %>
-  </div>
-  <div class='user-data'>
-    <h3>部署名</h3>
-    <%= @user.department %>
-  </div>
-  <div class='user-data'>
-    <h3>貸し出し中の備品</h3>
-    <% @rentals.each do |rental| %>
-      <div class='rental-list'>
-        <% if current_user.id == rental.user_id %>
-          <%= rental.item.name %>
-          <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
-        <% end %>
-      </div>
-    <% end %>
-    <div class='how'>
-      <%= "※返却の場合、『返却』押すと返却ができます" %>
+  <div class='lists'>
+  <h2>プロフィール</h2>
+    <div class='user-data'>
+      <h3>名前</h3>
+      <%= @user.name %>
     </div>
+    <div class='user-data'>
+      <h3>部署名</h3>
+      <%= @user.department %>
+    </div>
+    <div class='user-data'>
+      <h3>貸し出し中の備品</h3>
+      <% @rentals.each do |rental| %>
+        <div class='rental-list'>
+          <% if current_user.id == rental.user_id %>
+            <%= rental.item.name %>
+            <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
+          <% end %>
+        </div>
+      <% end %>
+      <div class='how'>
+        <%= "※返却の場合、『返却』押すと返却ができます" %>
+      </div>
+    </div>
+
+  </div>
+  <div class="switch">
+    <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
   </div>
 
+  <%= render "devise/shared/footer" %>
 </div>
-<div class="switch">
-  <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
-</div>
-
-<%= render "devise/shared/footer" %>

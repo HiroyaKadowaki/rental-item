@@ -1,50 +1,52 @@
-<header class='top-header'>
-  <div class='top-space'>
-    <h1>
-     <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
-    </h1>
-    <% if user_signed_in? %>
-      <ul class="login-list">
-        <li><%= link_to '備品の追加', new_item_path, class: "new-item" %></li>
-        <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
-        <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
-      </ul>
+<div class='wrapper'>
+  <header class='top-header'>
+    <div class='top-space'>
+      <h1>
+      <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
+      </h1>
+      <% if user_signed_in? %>
+        <ul class="login-list">
+          <li><%= link_to '備品の追加', new_item_path, class: "new-item" %></li>
+          <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
+          <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>
+        </ul>
+      <% end %>
+    </div>
+  </header>
+
+  <div class="items-main">
+    <h2 class="items-title">備品情報入力</h2>
+    <%= form_with model: @item, local: true do |f| %>
+
+    <%= render "devise/shared/error_messages", model: f.object %>
+
+    <div class="new-items">
+      <div class="weight-bold-text">
+        備品ナンバー
+        <span class="indispensable-required">必須</span>
+      </div>
+      <%= f.text_area :number, placeholder:"半角数字", class: "finld-line" %>
+      <div class="weight-bold-text">
+        備品名
+        <span class="indispensable-required">必須</span>
+      </div>
+      <%= f.text_area :name, class: "finld-line" %>
+      <div class="weight-bold-text">
+        カテゴリー選択
+      </div>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"finld-line"}) %>
+
+
+      <div class="sell-btn-contents">
+        <%= f.submit "登録する" ,class:"sell-btn" %>
+      </div>
+    </div>
     <% end %>
   </div>
-</header>
 
-<div class="items-main">
-  <h2 class="items-title">備品情報入力</h2>
-  <%= form_with model: @item, local: true do |f| %>
-
-  <%= render "devise/shared/error_messages", model: f.object %>
-
-  <div class="new-items">
-    <div class="weight-bold-text">
-      備品ナンバー
-      <span class="indispensable-required">必須</span>
-    </div>
-    <%= f.text_area :number, class: "finld-line" %>
-    <div class="weight-bold-text">
-      備品名
-      <span class="indispensable-required">必須</span>
-    </div>
-    <%= f.text_area :name, class: "finld-line" %>
-    <div class="weight-bold-text">
-      カテゴリー選択
-    </div>
-    <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"finld-line"}) %>
-
-
-    <div class="sell-btn-contents">
-      <%= f.submit "登録する" ,class:"sell-btn" %>
-    </div>
+  <div class="switch">
+    <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
   </div>
-  <% end %>
-</div>
 
-<div class="switch">
-  <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
+  <%= render "devise/shared/footer" %>
 </div>
-
-<%= render "devise/shared/footer" %>

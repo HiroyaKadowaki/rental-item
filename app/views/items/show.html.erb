@@ -1,58 +1,60 @@
-<%= render "devise/shared/header" %>
+<div class='wrapper'>
+  <%= render "devise/shared/header" %>
 
-<div class="items-main">
-  <div class="item-show">
-    <h3>備品名</h3>
-    <div class="show-name">
-      <%= @item.name %>
-    </div>
-    <h3>商品番号</h3>
-    <div class="show-font">
-      <%= @item.number %>
-    </div>
-    <h3>カテゴリー</h3>
-    <div class="show-font">
-      <%= @item.category.name %>
-    </div>
-  </div>
-
-  <div class='rental-item'>
-  <h3>貸し出し状況</h3>
-    <% if @item.rental != nil %>
-      <ul>
-        <li class='item-lists'>
-          <div class='show-font'>
-            <%= " 名前；" + @item.rental.user.name %>
-          </div>
-          <div class='show-font'>
-            <%= "貸し出し日；" + @item.rental.created_at.to_s(:date_jp) %>
-          </div>
-          <div class='show-font'>
-            <% if current_user.id == @item.rental.user_id %>
-              <%= link_to "返却", item_rental_path(@item.rental.item_id, @item.rental.id), method: :delete, class:'on-loan' %>
-            <% else %>
-              <%= link_to "貸し出し中", user_path(@item.rental.user_id), class:'on-loan' %>
-            <% end %>
-          </div>
-        </li>
-      </ul>
-      <div class='how'>
-        <%= "※返却の場合、『返却』押すと返却ができます" %>
+  <div class="items-main">
+    <div class="item-show">
+      <h3>備品名</h3>
+      <div class="show-name">
+        <%= @item.name %>
       </div>
-    <% else %>
-      <%= form_with model: @rental, url: item_rentals_path(@item.id), local: true do |f| %>
-        <%= f.submit "貸し出し可" ,class:'rental-path' %>
-      <%end %>
-    <% end %>
+      <h3>商品番号</h3>
+      <div class="show-font">
+        <%= @item.number %>
+      </div>
+      <h3>カテゴリー</h3>
+      <div class="show-font">
+        <%= @item.category.name %>
+      </div>
+    </div>
+
+    <div class='rental-item'>
+    <h3>貸し出し状況</h3>
+      <% if @item.rental != nil %>
+        <ul>
+          <li class='item-lists'>
+            <div class='show-font'>
+              <%= " 名前；" + @item.rental.user.name %>
+            </div>
+            <div class='show-font'>
+              <%= "貸し出し日；" + @item.rental.created_at.to_s(:date_jp) %>
+            </div>
+            <div class='show-font'>
+              <% if current_user.id == @item.rental.user_id %>
+                <%= link_to "返却", item_rental_path(@item.rental.item_id, @item.rental.id), method: :delete, class:'on-loan' %>
+              <% else %>
+                <%= link_to "貸し出し中", user_path(@item.rental.user_id), class:'on-loan' %>
+              <% end %>
+            </div>
+          </li>
+        </ul>
+        <div class='how'>
+          <%= "※返却の場合、『返却』押すと返却ができます" %>
+        </div>
+      <% else %>
+        <%= form_with model: @rental, url: item_rentals_path(@item.id), local: true do |f| %>
+          <%= f.submit "貸し出し可" ,class:'rental-path' %>
+        <%end %>
+      <% end %>
+    </div>
   </div>
-</div>
 
-<div class="switch">
-  <% if @item.rental == nil %>
-    <%= link_to '編集', edit_item_path, method: :get, class: "item-switch" %>
-    <%= link_to '削除', item_path, method: :delete, class:'item-switch' %>
-  <% end %>
-  <%=link_to 'もどる', category_path(@item.category.id), class:"item-switch" %>
-</div>
+  <div class="switch">
+    <% if @item.rental == nil %>
+      <%= link_to '編集', edit_item_path, method: :get, class: "item-switch" %>
+      <%= link_to '削除', item_path, method: :delete, class:'item-switch' %>
+    <% end %>
+    <%=link_to 'もどる', category_path(@item.category.id), class:"item-switch" %>
+  </div>
 
-<%= render "devise/shared/footer" %>
+  <%= render "devise/shared/footer" %>
+</div>
