@@ -14,10 +14,12 @@ li {
   text-align: right;
 }
 
+
 .wrapper {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  max-width: 100%;
 }
 
 /* 全体.xyz */
@@ -26,7 +28,7 @@ li {
 header {
   height: 75px;
   width: 100vw;
-  background-color: lightcyan;
+  background-color: #91C2E1;
 }
 
 .top-space {
@@ -34,7 +36,7 @@ header {
 }
 
 .top-name {
-  color: red;
+  color: #E12800;
   text-decoration: none;
 }
 
@@ -59,12 +61,23 @@ header {
   text-decoration: none;
 }
 
+.login:hover {
+  color: #91C2E1;
+  background-color: blue;
+}
+
 .logout {
   border: 2px solid darkblue;
-  padding: 5px;
-  color: black;
   border-radius: 5px;
+  background: #F4C600;
+  color: #E12800;
+  padding: 5px;
   text-decoration: none;
+}
+
+.logout:hover {
+  color: #F4C600;
+  background: #E12800;
 }
 
 /* ヘッダー.xyz */
@@ -74,7 +87,7 @@ header {
 footer {
   height: 25px;
   width: 100%;
-  background-color: cyan;
+  background-color: #91C2E1;
   margin-top: auto;
 }
 
@@ -162,6 +175,10 @@ footer {
   margin-top: 3px;
 }
 
+.actions:hover {
+  background-color: #FFEE45;
+}
+
 /* ログイン画面.xyz */
 
 /* ホーム画面 */
@@ -171,7 +188,6 @@ footer {
 }
 
 .category {
-  width: 100vw;
   height: 50px;
   margin: 15px 0;
   position: absolute;
@@ -188,10 +204,13 @@ footer {
 }
 
 .category-title {
+  padding: 0 10px;
   display: inline-flex;
-  background-color: brown;
+  font-style: italic;
   margin-top: 10px;
   margin-bottom: 20px;
+  font-size: 40px;
+  text-shadow: 10px 5px 2px silver;
 }
 
 .cate {
@@ -209,6 +228,8 @@ footer {
   justify-content: center;
 }
 
+
+
 .category-lists {
   margin-bottom: 10px;
 }
@@ -216,12 +237,17 @@ footer {
 .category-swtich {
   font-size: 22px;
   padding: 2px;
-  background-color: chartreuse;
+  background-color: #FFF579;
   border: 3px solid black;
   color: black;
   border-radius: 5px;
   text-decoration: none;
   display: inline-flex;
+}
+
+.category-swtich:hover {
+  background-color: black;
+  color: #FFF579;
 }
 
 .item-title {
@@ -258,24 +284,31 @@ footer {
 }
 
 .on-loan {
-  border: 2px solid lightcoral;
-  background-color: yellow;
-  color: red;
-  border-radius: 5px;
-  margin: 1px 0 3px;
-  font-size: 15px;
-  padding: 2px;
-  text-decoration: none;
+  margin-top: 3px;
+  color: #F84031;
+  background-color: #fff100;
+  border: 5px outset #ccc100;
+  border-radius: 50px;
+  padding: 0 5px;
+}
+
+.on-loan:hover {
+  color: #fff100;
+  background-color: #F84031;
 }
 
 .rental-path {
-  border: 2px solid green;
-  background-color: lightgreen;
-  color: blue;
+  margin-top: 3px;
+  color: #0081D9;
+  background-color: greenyellow;
+  border: 5px outset #7FC06C;
   border-radius: 5px;
-  margin: 1px 0 3px;
-  font-size: 15px;
-  padding: 2px;
+  padding: 0 5px;
+}
+
+.rental-path:hover {
+  color: greenyellow;
+  background-color: #0081D9;
 }
 
 /* ホーム画面.xyz */
@@ -305,6 +338,10 @@ footer {
   text-decoration: none;
 }
 
+.item-switch:hover {
+  color: #FF9A08;
+}
+
 .indispensable-required {
   color: red;
 }
@@ -323,6 +360,11 @@ footer {
   color: blue;
   border: 2px solid blue;
   border-radius: 5px;
+}
+
+.sell-btn:hover {
+  background-color: blue;
+  color: lightskyblue;
 }
 
 /* 備品画面.xyz */
