@@ -1,54 +1,54 @@
-<header class='top-header'>
-  <div class='top-space'>
-    <h1 class="top-name">
-    <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
-    </h1>
-    <ul class='login-list'>
-      <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
-    </ul>
-  </div>
-</header>
+<div class='wrapper'>
+  <header class='top-header'>
+    <div class='top-space'>
+      <h1 class="top-name">
+      <%= link_to "貸し出し管理アプリ", root_path, class:"top-name" %>
+      </h1>
+      <ul class='login-list'>
+        <li><%= link_to 'ログイン', new_user_session_path, class: "login" %></li>
+      </ul>
+    </div>
+  </header>
 
-<%= form_with model: @user, url: user_registration_path, class: 'registration', local: true do |f| %>
-  <div class="container">
-    <div class="submit-container submit">
-      <h2>新規登録</h2>
-      <%= render "devise/shared/error_messages", model: f.object %>
+  <%= form_with model: @user, url: user_registration_path, class: 'registration', local: true do |f| %>
+    <div class="container">
+      <div class="submit-container submit">
+        <h2>新規登録</h2>
+        <%= render "devise/shared/error_messages", model: f.object %>
 
-      <div class='input-name-wrap'>
-        <%= f.text_area :name, placeholder:"名前（必須）", class: "finld-line" %>
-      </div>
+        <div class='input-name-wrap'>
+          <%= f.text_area :name, placeholder:"名前（必須）", class: "finld-line" %>
+        </div>
 
-      <div class='input-name-wrap'>
-        <%= f.text_area :department, placeholder:"部署名（必須）", class: "finld-line" %>
-      </div>
+        <div class='input-name-wrap'>
+          <%= f.text_area :department, placeholder:"部署名（必須）", class: "finld-line" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :email %><br />
-        <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "finld-line" %>
-      </div>
+        <div class="field">
+          <%= f.label :email %><br />
+          <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "finld-line" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :password %>
-        <% if @minimum_password_length %>
-        <em>(<%= @minimum_password_length %> characters minimum)</em>
-        <% end %><br />
-        <%= f.password_field :password, autocomplete: "new-password", class: "finld-line" %>
-      </div>
+        <div class="field">
+          <%= f.label :password %>
+          <% if @minimum_password_length %>
+          <em>(<%= @minimum_password_length %> characters minimum)</em>
+          <% end %><br />
+          <%= f.password_field :password, autocomplete: "new-password", class: "finld-line" %>
+        </div>
 
-      <div class="field">
-        <%= f.label :password_confirmation %><br />
-        <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "finld-line" %>
-      </div>
-      <div class='actions-position'>
-        <div class="actions">
-          <%= f.submit "Sign up" %>
+        <div class="field">
+          <%= f.label :password_confirmation %><br />
+          <%= f.password_field :password_confirmation, autocomplete: "new-password", class: "finld-line" %>
+        </div>
+        <div class='actions-position'>
+          <div class="actions">
+            <%= f.submit "Sign up" %>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-<% end %>
-
+  <% end %>
+  <%= render "devise/shared/footer" %>
+</div>
 <%#= render "devise/shared/links" %>
-
-<%= render "devise/shared/footer" %>
