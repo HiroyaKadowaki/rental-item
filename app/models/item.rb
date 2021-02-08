@@ -8,4 +8,5 @@ class Item < ApplicationRecord
 
   belongs_to :category
   has_one :rental
+  has_many :bookings
 end

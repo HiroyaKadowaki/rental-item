@@ -34,7 +34,7 @@
       <div class="weight-bold-text">
         カテゴリー選択
       </div>
-      <%= f.collection_select(:category_id, Category.all, :id, :name, {}, {class:"finld-line"}) %>
+      <%= f.collection_select(:category_id, Category.all, :id, :name, {prompt:"選択してください"}, {class:"finld-line"}) %>
 
 
       <div class="sell-btn-contents">
