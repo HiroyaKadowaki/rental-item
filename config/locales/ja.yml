@@ -9,5 +9,9 @@ ja:
       item:
         number: 番号
         name: 名前
+        category: カテゴリー
       category:
         name: 名前
+      booking:
+        date: 予約日
+        item: 備品
