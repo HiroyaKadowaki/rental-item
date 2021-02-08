@@ -23,4 +23,5 @@ class User < ApplicationRecord
 
   has_many :categories
   has_many :rentals
+  has_many :bookings
 end

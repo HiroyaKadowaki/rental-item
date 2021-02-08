@@ -40,6 +40,7 @@ group :development, :test do
   gem 'capistrano-bundler'
   gem 'capistrano-rails'
   gem 'capistrano3-unicorn'
+  gem 'pry-rails'
 end
 
 group :development do
@@ -69,3 +70,4 @@ gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem 'pry-rails'
 gem 'devise'
 gem 'rails-i18n'
+gem 'bootstrap-datetimepicker-rails'
