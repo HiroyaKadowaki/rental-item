@@ -5,6 +5,7 @@
     </h1>
     <% if user_signed_in? %>
       <ul class="login-list">
+        <li><%= link_to "備品の予約", new_booking_path, class: "new-item" %></li>
         <li><%= link_to '備品の追加', new_item_path, class: "new-item" %></li>
         <li><%= link_to current_user.name, user_path(current_user.id), class: "user-name" %></li>
         <li><%= link_to 'ログアウト', destroy_user_session_path, method: :delete, class: "logout" %></li>

@@ -6,6 +6,6 @@ Rails.application.routes.draw do
   resources :items do
     resources :rentals, only: [:index, :create, :destroy]
   end
-  resources :bookings, only: [:new, :create]
+  resources :bookings, only: [:new, :create, :edit, :update, :destroy]
   resources :users, only: [:show]
 end

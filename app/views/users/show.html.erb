@@ -1,5 +1,5 @@
 <div class='wrapper'>
-  <%= render "devise/shared/header" %>
+  <%= render 'devise/shared/header' %>
 
   <div class='lists'>
   <h2>プロフィール</h2>
@@ -18,18 +18,48 @@
           <% if current_user.id == rental.user_id %>
             <%= rental.item.name %>
             <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
+          <% else %>
+            <%= rental.item.name %>
+            <%= link_to "貸し出し中", user_path(rental.user_id), class:'on-loan' %>
           <% end %>
         </div>
       <% end %>
       <div class='how'>
         <%= "※返却の場合、『返却』押すと返却ができます" %>
       </div>
+      <h3>予約状況</h3>
+      <% @booking.each do |booking| %>
+        <div class='rental-list'>
+          <div class='booking-list'>
+            <div>
+              <%= "備品名 ;" %>
+            </div>
+            <div class='booking-lists'>
+              <%= link_to booking.item.name, item_path(booking.item_id), class:'item-link' %>
+            </div>
+            <div>
+              <%= "予約日 ;" %>
+            </div>
+            <% if current_user.id == booking.user_id %>
+              <div class='booking-lists'>
+                <%= link_to booking.date, edit_booking_path(booking), class:'item-link' %>
+              </div>
+              <div>
+                <%= link_to "キャンセル", booking_path(booking), method: :delete, class:'on-loan' %>
+              </div>
+            <% else %>
+              <div class='booking-lists'>
+                <%= booking.date %>
+              </div>
+            <% end %>
+          </div>
+        </div>
+      <% end %>
     </div>
-
   </div>
-  <div class="switch">
-    <%=link_to 'ホームにもどる', root_path, class:"item-switch" %>
+  <div class='switch'>
+    <%=link_to 'ホームにもどる', root_path, class:'item-switch' %>
   </div>
 
-  <%= render "devise/shared/footer" %>
+  <%= render 'devise/shared/footer' %>
 </div>
