@@ -9,8 +9,9 @@ li {
 }
 
 .how {
+
   font-size: 10px;
-  margin-right:2vw ;
+  margin-right: 10px ;
   text-align: right;
 }
 
@@ -264,11 +265,11 @@ footer {
 }
 
 .item-number {
-  width: 20vw;
+  width: 150px;
 }
 
 .item-name {
-  width: 50vw;
+  width: calc(100vw - (150px + 70px + 150px));
 }
 
 .item-link {
@@ -276,8 +277,27 @@ footer {
   color: black;
 }
 
+.item-booking {
+  width: 70px;
+  display: flex;
+  justify-content: center;
+}
+
+.item-booking-link {
+  font-weight: bold;
+  color: #F84031;
+  border: 3px solid #E12800;
+  background-color: #F4C600;
+  border-radius: 3px;
+}
+
+.item-booking-link:hover {
+  color: #F4C600;
+  background-color: #F84031;
+}
+
 .item-rental {
-  width: 30vw;
+  width: 150px;
   /* background-color: cyan; */
   display: flex;
   justify-content: center;
@@ -367,4 +387,22 @@ footer {
   color: lightskyblue;
 }
 
+.rental-list {
+  margin: 3px 0;
+}
+
 /* 備品画面.xyz */
+
+/* 予約部分 */
+
+.booking-list {
+  margin: 3px 0;
+  display: flex;
+  align-self: center;
+}
+
+.booking-lists {
+  margin: 0 10px;
+}
+
+/* 予約部分.xyz */
