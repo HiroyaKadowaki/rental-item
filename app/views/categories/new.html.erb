@@ -21,7 +21,7 @@
     <%= render "devise/shared/error_messages", model: f.object %>
     <h3>名前</h3>
     <div class='new-items'>
-      <%= f.text_area :name, class: 'finld-line' %>
+      <%= f.text_area :name, placeholder:"（必須）", class: 'finld-line' %>
     </div>
     <div class="sell-btn-contents">
       <%= f.submit "登録する" ,class:"sell-btn" %>

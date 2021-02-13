@@ -1,5 +1,15 @@
 require 'rails_helper'
 
 RSpec.describe Rental, type: :model do
-  pending "add some examples to (or delete) #{__FILE__}"
+  describe '#create' do
+    before do
+      @rental = FactoryBot.build(:rental)
+    end
+
+    context 'データが保存できる時' do
+      it "全てのカラム名が存在すれば登録できること" do
+        expect(@rental).to be_valid
+      end
+    end
+  end
 end

@@ -15,3 +15,4 @@ ja:
       booking:
         date: 予約日
         item: 備品
+        item_id: 選択された備品の予約
