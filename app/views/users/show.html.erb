@@ -17,7 +17,7 @@
         <div class='rental-list'>
           <% if current_user.id == rental.user_id %>
             <%= rental.item.name %>
-            <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan' %>
+            <%= link_to "返却", item_rental_path(rental.item_id, rental.id), method: :delete, class:'on-loan', id:"rental-#{rental.item.id}" %>
           <% else %>
             <%= rental.item.name %>
             <%= link_to "貸し出し中", user_path(rental.user_id), class:'on-loan' %>
