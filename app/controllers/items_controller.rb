@@ -21,6 +21,7 @@ class ItemsController < ApplicationController
   end
 
   def show
+    @booking = @item.bookings
   end
 
   def edit

@@ -24,9 +24,6 @@
           <% end %>
         </div>
       <% end %>
-      <div class='how'>
-        <%= "※返却の場合、『返却』押すと返却ができます" %>
-      </div>
       <h3>予約状況</h3>
       <% @booking.each do |booking| %>
         <div class='rental-list'>
@@ -37,22 +34,31 @@
             <div class='booking-lists'>
               <%= link_to booking.item.name, item_path(booking.item_id), class:'item-link' %>
             </div>
-            <div>
+            <div class='booking-lists'>
               <%= "予約日 ;" %>
             </div>
+            <div class='booking-lists'>
+              <%= booking.date %>
+            </div>
             <% if current_user.id == booking.user_id %>
-              <div class='booking-lists'>
-                <%= link_to booking.date, edit_booking_path(booking), class:'item-link' %>
-              </div>
+              <%= link_to "変更", edit_booking_path(booking), class:'booking-edit' %>
               <div>
                 <%= link_to "キャンセル", booking_path(booking), method: :delete, class:'on-loan' %>
               </div>
-            <% else %>
-              <div class='booking-lists'>
-                <%= booking.date %>
-              </div>
             <% end %>
           </div>
+        </div>
+      <% end %>
+      <% if current_user.id == @user.id %>
+        <div class='description'>
+          <span class="description-font">使い方</span>
+            <div class='hover'>
+              <div class='hover-text'>
+                <p>備品列の<span class='on-loan'>返却</span>を押すと貸し出しできます</p>
+                <p>備品列の<span class='booking-edit'>変更</span>を押すと予約の変更ができます</p>
+                <p>備品の列の<span class='on-loan'>キャンセル</span>を押すと予約キャンセルできます</p>
+              </div>
+            </div>
         </div>
       <% end %>
     </div>

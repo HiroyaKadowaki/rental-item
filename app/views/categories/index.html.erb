@@ -1,10 +1,15 @@
+<head>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="./css/style.css">
+</head>
+
 <div class='wrapper'>
   <%= render "devise/shared/header" %>
 
 
   <div class='lists'>
     <% if user_signed_in? %>
-      <h2 class='category-title'>カテゴリー</h2>
+      <h2 class='main-title'>カテゴリー</h2>
       <div class='category'>
         <div class='cate'>
         <%= link_to "カテゴリー追加", new_category_path, class:'category-create' %>
@@ -17,6 +22,17 @@
           </li>
         </ul>
       <% end %>
+      <div class='description'>
+        <span class="description-font">使い方</span>
+          <div class='hover'>
+            <div class='hover-text'>
+              <p>・備品の予約より備品の予約ができます</p>
+              <p>・備品の追加より備品の追加ができます</p>
+              <p>・登録した名前より自らのプロフィールを確認できます</p>
+              <p>・カテゴリー追加よりカテゴリーを追加できます</p>
+            </div>
+          </div>
+      </div>
     <% end %>
   </div>
 

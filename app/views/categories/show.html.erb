@@ -3,7 +3,7 @@
 
   <div class='items-main'>
     <div class='item-show'>
-      <h2><%= @category.name %></h2>
+      <h2 class='main-title' ><%= @category.name %></h2>
     </div>
     <% if @items.exists? %>
       <h2 class='title'>備品一覧</h2>
@@ -53,11 +53,16 @@
           </li>
         </ul>
       <% end %>
-      <div class='how'>
-        <%= "※『貸し出し可』を押すと貸し出しできます" %>
-      </div>
-      <div class='how'>
-        <%= "※『貸し出し可』を押すと貸し出しできます" %>
+      <div class='description'>
+        <span class="description-font">使い方</span>
+          <div class='hover'>
+            <div class='hover-text'>
+              <p>備品の列の<span class='rental-path'>貸し出し可</span>を押すと貸し出しできます</p>
+              <p>備品列の<span class='on-loan'>返却</span>を押すと返却できます</p>
+              <p>備品列の<span class='on-loan'>貸し出し中</span>を押すと借りている人のプロフィールが見れます</p>
+              <p>備品の列の<span class='item-booking-link'>予約中</span>を押すと予約している人のプロフィールが見れます</p>
+            </div>
+          </div>
       </div>
     <% else %>
     <h2>備品を登録してください</h2>

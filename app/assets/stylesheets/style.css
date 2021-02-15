@@ -8,14 +8,6 @@ li {
   margin: 0 5px;
 }
 
-.how {
-
-  font-size: 10px;
-  margin-right: 10px ;
-  text-align: right;
-}
-
-
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -29,7 +21,7 @@ li {
 header {
   height: 75px;
   width: 100vw;
-  background-color: #91C2E1;
+  background-image: linear-gradient(to right, #68ACEA 0%, #92C8E8 100%);
 }
 
 .top-space {
@@ -39,6 +31,10 @@ header {
 .top-name {
   color: #E12800;
   text-decoration: none;
+}
+
+.top-name:hover {
+  border-bottom: 3px solid #E12800;
 }
 
 .login-list {
@@ -51,7 +47,18 @@ header {
 }
 
 .new-item ,.user-name {
+  color: black;
   text-decoration: none;
+}
+
+.user-name:hover {
+  color: #DC2B14;
+  border-bottom: 1px solid #DC2B14;
+}
+
+.new-item:hover {
+  color: #DC2B14;
+  border-bottom: 1px solid #DC2B14;
 }
 
 .login {
@@ -156,6 +163,8 @@ footer {
   font-size: 15px;
 }
 
+
+
 .actions-position {
   display: flex;
   justify-content: center;
@@ -194,8 +203,6 @@ footer {
   position: absolute;
   top: 75px;
   left: calc(100vw - 145px);
-  /* display: flex;
-  justify-content: space-between; memo;カテゴリー追加の場合外す*/
 }
 
 .category-name {
@@ -204,14 +211,16 @@ footer {
   font-weight: bold;
 }
 
-.category-title {
+.main-title {
   padding: 0 10px;
   display: inline-flex;
-  font-style: italic;
   margin-top: 10px;
   margin-bottom: 20px;
-  font-size: 40px;
-  text-shadow: 10px 5px 2px silver;
+  background-color: #CE4E4A;
+  color: #F7F7F7;
+  border-radius: 5px;
+  font-size: 35px;
+  font-style: italic;
 }
 
 .cate {
@@ -219,17 +228,20 @@ footer {
 }
 
 .category-create {
-  background-color: royalblue;
-  color: black;
+  background-color: lightskyblue;
+  color: blue;
+  border: 2px solid blue;
   width: 125px;
-  border: 2px solid black;
   border-radius: 5px;
   text-decoration: none;
   display: block;
   justify-content: center;
 }
 
-
+.category-create:hover {
+  background-color: blue;
+  color: lightskyblue;
+}
 
 .category-lists {
   margin-bottom: 10px;
@@ -249,6 +261,7 @@ footer {
 .category-swtich:hover {
   background-color: black;
   color: #FFF579;
+  font-size: 35px;
 }
 
 .item-title {
@@ -275,6 +288,11 @@ footer {
 .item-link {
   text-decoration: none;
   color: black;
+}
+
+.item-link:hover {
+  color: #DC2B14;
+  border-bottom: 1px solid #DC2B14;
 }
 
 .item-booking {
@@ -395,6 +413,10 @@ footer {
 
 /* 予約部分 */
 
+.booking-main {
+  margin-left: 10px;
+}
+
 .booking-list {
   margin: 3px 0;
   display: flex;
@@ -402,7 +424,58 @@ footer {
 }
 
 .booking-lists {
-  margin: 0 10px;
+  margin-left: 10px;
+}
+
+.booking-edit {
+  color: blue;
+  margin: 0 5px
+}
+
+.booking-edit:hover {
+  color: #FF9A08;
 }
 
 /* 予約部分.xyz */
+
+/* test */
+
+/* 通常時はホバー時の文字を非表示にする */
+
+.description {
+  margin-top: 20px;
+  display: inline-block;
+}
+
+.description-font {
+  background-color: #4eb7d9;
+  width: 70px;
+  padding: 5px;
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  border-radius: 5px;
+}
+
+.description:hover .hover {
+  display: inline;
+
+}
+
+.description:hover .description-font {
+  display: none;
+}
+
+.hover{
+  display: none;
+
+}
+
+.hover-text {
+  font-size: 20px;
+  padding: 4px;
+  border: 5px solid black;
+  border-radius: 10px;
+}
+
+/* test.xyz */
