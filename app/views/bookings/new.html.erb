@@ -1,27 +1,28 @@
 <div class='wrapper'>
   <%= render "devise/shared/header" %>
-  <h2 class="items-title">備品情報入力</h2>
-  <%= form_with model: @booking, local: true do |f| %>
+  <div class='booking-main'>
+    <h2 class="items-title">備品情報入力</h2>
+    <%= form_with model: @booking, local: true do |f| %>
 
-  <%= render "devise/shared/error_messages", model: f.object %>
+    <%= render "devise/shared/error_messages", model: f.object %>
 
-    <div class="new-items">
-      <div class="weight-bold-text">
-        予約日
+      <div class="new-items">
+        <div class="weight-bold-text">
+          予約日
+        </div>
+        <%= f.date_field :date, {class:"finld-line"} %>
+        <div class="weight-bold-text">
+          備品選択
+        </div>
+        <%= f.collection_select(:item_id, Item.all, :id, :name, {prompt:"選択してください"}, {class:"finld-line"}) %>
+
+
+        <div class="sell-btn-contents">
+          <%= f.submit "登録する" ,class:"sell-btn" %>
+        </div>
       </div>
-      <%= f.date_field :date, {class:"finld-line"} %>
-      <div class="weight-bold-text">
-        備品選択
-      </div>
-      <%= f.collection_select(:item_id, Item.all, :id, :name, {prompt:"選択してください"}, {class:"finld-line"}) %>
-
-
-      <div class="sell-btn-contents">
-        <%= f.submit "登録する" ,class:"sell-btn" %>
-      </div>
-    </div>
-  <% end %>
-
+    <% end %>
+  </div>
 
   <%= render "devise/shared/footer" %>
 </div>
