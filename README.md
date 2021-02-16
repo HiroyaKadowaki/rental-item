@@ -91,10 +91,6 @@ password;s222222
 ![マイページからも返却](https://user-images.githubusercontent.com/71200627/108034763-59825700-7079-11eb-8096-9dab895561c7.gif)
 
 
-貸し出し備品は詳細ページからも返却可能
-
-![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/108025162-541d1080-7069-11eb-8c05-fe2d4d4554c2.mp4)
-
 予約を行った場合
 
 ![備品を予約した場合](https://user-images.githubusercontent.com/71200627/108034897-8df61300-7079-11eb-92dc-e47433e68184.gif)
