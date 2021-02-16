@@ -57,70 +57,91 @@ password;s222222
 未ログイン時の画面とログインと新規登録画面
 
 
-![ダウンロード (6)](https://user-images.githubusercontent.com/71200627/105972575-1878d180-60cf-11eb-9483-3391433d4ad5.gif)
+![ダウンロード (6)](https://user-images.githubusercontent.com/71200627/108024724-719daa80-7068-11eb-931c-a60aa2317b64.mp4)
 
 
 ログイン機能とログイン時の画面
 
 
-![ダウンロード (9)](https://user-images.githubusercontent.com/71200627/105973369-00ee1880-60d0-11eb-8d0b-d6bebc0fe43a.gif)
+![ダウンロード (9)](https://user-images.githubusercontent.com/71200627/108024810-a1e54900-7068-11eb-8db8-e583f5e2aac1.mp4)
 
 カテゴリーの追加と追加された状態
 
 
-![ダウンロード (3)](https://user-images.githubusercontent.com/71200627/105971803-46a9e180-60ce-11eb-9317-ced5de9c7b5d.gif)
+![ダウンロード (3)](https://user-images.githubusercontent.com/71200627/108024871-bfb2ae00-7068-11eb-8d3e-8430a20f94eb.mp4)
 
 カテゴリーの備品データありなしのビューの違い
 
 
-![ダウンロード](https://user-images.githubusercontent.com/71200627/105973782-7e198d80-60d0-11eb-9cd0-ed170692ca6e.gif)
+![ダウンロード](https://user-images.githubusercontent.com/71200627/108024905-d35e1480-7068-11eb-9e87-61a4b94657a5.mp4)
 
 
 備品の追加と追加された状態
 
 
-![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/105971342-c1263180-60cd-11eb-9db5-93be1790f30d.gif)
+![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/108024947-e375f400-7068-11eb-85ea-970b47477ebb.mp4)
+
+説明文を選択すると、本アプリの説明が出てくる
+
+![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/108024998-043e4980-7069-11eb-941c-020a8337385c.mp4)
+
 
 
 貸し出し可と返却の切り替え
 
 
-![ダウンロード (7)](https://user-images.githubusercontent.com/71200627/105972881-70afd380-60cf-11eb-8259-baf73db582ac.gif)
+![ダウンロード (7)](https://user-images.githubusercontent.com/71200627/108025131-436c9a80-7069-11eb-9ae5-216edecabe89.mp4)
 
 
 マイページから借りているものの確認、返却可能
 
 
-![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/105972426-f41cf500-60ce-11eb-8117-3fe0583c1d6e.gif)
+![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/108025162-541d1080-7069-11eb-8c05-fe2d4d4554c2.mp4)
+
+
+貸し出し備品は詳細ページからも返却可能
+
+
+![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025330-a0685080-7069-11eb-8b30-53ce9185f2ac.mp4)
+
+
+予約を行った場合
+
+![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025421-ce4d9500-7069-11eb-85f1-41de3c7e9a70.mp4)
+
+
+マイページより予約のキャンセルが可能
+
+![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025536-fb9a4300-7069-11eb-8a83-e5f547406257.mp4)
+
 
 他人の貸し出し状況によって貸し出し状況の変化
 
-
-![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/105972066-9688a880-60ce-11eb-980d-77611d89e8fd.gif)
-
-
-貸し出されていない備品は詳細ページからも返却可能
+![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025246-7e6ece00-7069-11eb-8be7-1f1e65f02370.mp4)
 
 
-![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/105973103-ae146100-60cf-11eb-82fe-586305acf278.gif)
+予約中を押すと予約者のプロフィールにいく
 
+![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025579-11a80380-706a-11eb-82fa-b3558068ff2c.mp4)
+
+貸し出し中を押すと貸し出されている人のプロフィールにいく
+
+![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025781-7c593f00-706a-11eb-9c62-1073b60d0552.mp4)
 
 
 備品の削除
 
-
-![ダウンロード (2)](https://user-images.githubusercontent.com/71200627/105971636-16624300-60ce-11eb-99d2-9a592a50999f.gif)
+![ダウンロード (2)](https://user-images.githubusercontent.com/71200627/108025836-8f6c0f00-706a-11eb-8fc4-43c527defbd4.mp4)
 
 
 # 実装予定の機能
 
-・備品予約機能
-・エラー文を日本語化
 ・貸し出し履歴機能
 
 # データベース設計
 
-https://gyazo.com/1afbcb6147442b549e1faecf91f58440
+<img width="794" alt="b810fce9ded14dd55e3c0acab3c3f3de" src="https://user-images.githubusercontent.com/71200627/108027842-28505980-706e-11eb-85ff-1b8efab6584d.png">
+
 
 # ローカルでの動作方法
 
@@ -143,6 +164,7 @@ Rubyのバージョン（_6.0.0_)
 
 - has_many :categories
 - has_many :rentals
+- has_many :bookings
 
 ## categories テーブル
 
@@ -169,11 +191,25 @@ Rubyのバージョン（_6.0.0_)
 
 - belongs_to :category
 - has_one :rental
+- has_many :bookings
 
 ## rentals テーブル
 
 | Column     | Type       | Options                        |
 | ---------- | ---------- | ------------------------------ |
+| user       | references | null: false, foreign_key: true |
+| item       | references | null: false, foreign_key: true |
+
+### Association
+
+- belongs_to :user
+- belongs_to :item
+
+## bookings テーブル
+
+| Column     | Type       | Options                        |
+| ---------- | ---------- | ------------------------------ |
+| date       | date       | null: false                    |
 | user       | references | null: false, foreign_key: true |
 | item       | references | null: false, foreign_key: true |
 
