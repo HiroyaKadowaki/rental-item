@@ -438,7 +438,7 @@ footer {
 
 /* 予約部分.xyz */
 
-/* test */
+/* 使い方 */
 
 /* 通常時はホバー時の文字を非表示にする */
 
@@ -468,14 +468,31 @@ footer {
 
 .hover{
   display: none;
-
 }
 
-.hover-text {
+.hover-font {
   font-size: 20px;
   padding: 4px;
   border: 5px solid black;
   border-radius: 10px;
 }
 
-/* test.xyz */
+.p {
+  margin: 3px 0;
+}
+
+.category-create-description {
+  background-color: lightskyblue;
+  color: blue;
+  border: 2px solid blue;
+  width: 200px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+.category-create-description:hover {
+  background-color: blue;
+  color: lightskyblue;
+}
+
+/* 使い方.xyz */
