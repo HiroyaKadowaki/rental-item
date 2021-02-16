@@ -56,87 +56,72 @@ password;s222222
 
 未ログイン時の画面とログインと新規登録画面
 
-
-![ダウンロード (6)](https://user-images.githubusercontent.com/71200627/108024724-719daa80-7068-11eb-931c-a60aa2317b64.mp4)
-
+![ログインと新規登録画面の確認](https://user-images.githubusercontent.com/71200627/108034363-c0534080-7078-11eb-96be-f4defbf5b569.gif)
 
 ログイン機能とログイン時の画面
 
+![ログインした場合のサイトの動き](https://user-images.githubusercontent.com/71200627/108034390-cb0dd580-7078-11eb-846f-2d8dcb6458d1.gif)
 
-![ダウンロード (9)](https://user-images.githubusercontent.com/71200627/108024810-a1e54900-7068-11eb-8db8-e583f5e2aac1.mp4)
+説明文を選択すると、本アプリの説明が出てくる
+
+![説明文が出てくるのかを確認](https://user-images.githubusercontent.com/71200627/108034613-1aec9c80-7079-11eb-8c30-28d8cb425392.gif)
+
 
 カテゴリーの追加と追加された状態
 
-
-![ダウンロード (3)](https://user-images.githubusercontent.com/71200627/108024871-bfb2ae00-7068-11eb-8d3e-8430a20f94eb.mp4)
+![カテゴリーを追加した場合](https://user-images.githubusercontent.com/71200627/108034437-dd880f00-7078-11eb-9698-c5ad15ab37d0.gif)
 
 カテゴリーの備品データありなしのビューの違い
 
-
-![ダウンロード](https://user-images.githubusercontent.com/71200627/108024905-d35e1480-7068-11eb-9e87-61a4b94657a5.mp4)
+![備品有無での見た目の変化](https://user-images.githubusercontent.com/71200627/108034486-f1337580-7078-11eb-9a50-d5479ceb8de0.gif)
 
 
 備品の追加と追加された状態
 
-
-![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/108024947-e375f400-7068-11eb-85ea-970b47477ebb.mp4)
-
-説明文を選択すると、本アプリの説明が出てくる
-
-![ダウンロード (1)](https://user-images.githubusercontent.com/71200627/108024998-043e4980-7069-11eb-941c-020a8337385c.mp4)
-
+![備品の追加](https://user-images.githubusercontent.com/71200627/108034536-04464580-7079-11eb-9cb3-d1284be45b2d.gif)
 
 
 貸し出し可と返却の切り替え
 
-
-![ダウンロード (7)](https://user-images.githubusercontent.com/71200627/108025131-436c9a80-7069-11eb-9ae5-216edecabe89.mp4)
+![貸し出しの変化](https://user-images.githubusercontent.com/71200627/108034705-3f487900-7079-11eb-922f-b8a936806e3d.gif)
 
 
 マイページから借りているものの確認、返却可能
 
-
-![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/108025162-541d1080-7069-11eb-8c05-fe2d4d4554c2.mp4)
+![マイページからも返却](https://user-images.githubusercontent.com/71200627/108034763-59825700-7079-11eb-8096-9dab895561c7.gif)
 
 
 貸し出し備品は詳細ページからも返却可能
 
-
-![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025330-a0685080-7069-11eb-8b30-53ce9185f2ac.mp4)
-
+![プロフィールからも削除](https://user-images.githubusercontent.com/71200627/108025162-541d1080-7069-11eb-8c05-fe2d4d4554c2.mp4)
 
 予約を行った場合
 
-![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025421-ce4d9500-7069-11eb-85f1-41de3c7e9a70.mp4)
+![備品を予約した場合](https://user-images.githubusercontent.com/71200627/108034897-8df61300-7079-11eb-92dc-e47433e68184.gif)
 
 
 マイページより予約のキャンセルが可能
 
-![ダウンロード (8)](https://user-images.githubusercontent.com/71200627/108025536-fb9a4300-7069-11eb-8a83-e5f547406257.mp4)
-
-
-他人の貸し出し状況によって貸し出し状況の変化
-
-![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025246-7e6ece00-7069-11eb-8be7-1f1e65f02370.mp4)
+![予約者のページより予約のキャンセルが可能](https://user-images.githubusercontent.com/71200627/108034957-9fd7b600-7079-11eb-8ec9-af7d128c8f05.gif)
 
 
 予約中を押すと予約者のプロフィールにいく
 
-![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025579-11a80380-706a-11eb-82fa-b3558068ff2c.mp4)
+![予約中を押すと予約者のページに飛ぶ](https://user-images.githubusercontent.com/71200627/108035472-52a81400-707a-11eb-8f56-b9893f8c3d1a.gif)
 
 貸し出し中を押すと貸し出されている人のプロフィールにいく
 
-![ダウンロード (4)](https://user-images.githubusercontent.com/71200627/108025781-7c593f00-706a-11eb-9c62-1073b60d0552.mp4)
+![他のユーザーが借りた場合はそのユーザーページに飛ぶ](https://user-images.githubusercontent.com/71200627/108035332-268c9300-707a-11eb-95f5-7233a97864c3.gif)
 
 
 備品の削除
 
-![ダウンロード (2)](https://user-images.githubusercontent.com/71200627/108025836-8f6c0f00-706a-11eb-8fc4-43c527defbd4.mp4)
+![備品の削除](https://user-images.githubusercontent.com/71200627/108035318-1ffe1b80-707a-11eb-8163-0b48a1a2899e.gif)
 
 
-# 実装予定の機能
+<!-- # 実装予定の機能
 
-・貸し出し履歴機能
+・貸し出し履歴機能 -->
 
 # データベース設計
 
