@@ -9,11 +9,11 @@
 
 # URL
 
-・heroku
-https://rental-item.herokuapp.com
-
 ・AWS
 http://18.180.185.54/
+
+・heroku（test用）
+https://rental-item.herokuapp.com
 
 # テスト用アカウント
 
